@@ -1,10 +1,10 @@
-# Project Title: Techincal Documentation Project - How to Create a Simple Project Plan for Development
+# Project Title: Getting Started With Git - Techincal Documentation Project
 
 ***
 
 > Author: Amah Martin
 >
-> Last Updated: 8-2-2020
+> Last Updated: 8-10-2020
 
 ## Table of Contents
 
@@ -16,7 +16,7 @@
 
 ## Project Summary
 
-This is a website that displays a technical documentation page describing how to create a simple project plan for basic development
+This is a website that displays a technical documentation page describing how use basic Git commands
 
 ## Technical Summary
 
@@ -32,8 +32,8 @@ The following technologies are used to build this application:
 
 ## Milestones
 
-1. Create the page layout using CSS grid and CSS flexbox
-2. Add content
+1. Create the page layout using CSS grid and CSS flexbox ✔️
+2. Add content ✔️
 3. Add media queries for responsiveness
 4. Deploy to GitHub Pages
 

@@ -1,20 +1,21 @@
 * {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
-html {
-    scroll-behavior: smooth;
+body {
+    overflow-y: hidden;
 }
 
 div#container-grid {
     display: grid;
     grid-template-rows: repeat(auto-fit, 1fr);
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    grid-template-areas: 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-areas:
         'topnav'
         'sidebarnav'
         'maincontent'
-       'footer'
+        'footer'
     ;
 }
 
@@ -29,7 +30,7 @@ nav#top-nav {
     display: grid;
     grid-template-rows: repeat(auto-fit, 1fr);
     grid-template-columns: repeat(auto-fit, 1fr);
-    grid-template-areas: 
+    grid-template-areas:
         '. logo   menu'
         '. topnav .   '
     ;
@@ -76,13 +77,12 @@ div#sidebar-div {
     flex-direction: column;
     background-color: #9A8080;
     padding: 1em;
-    height: 100%;
 }
 
 header.sidebar-title {
     align-self: center;
     font-weight: bold;
-    font-size:  22px;
+    font-size: 22px;
     max-width: 100%;
 }
 
@@ -97,7 +97,7 @@ header h2.main-section-title {
     text-align: left;
 }
 
-header > p {
+header>p {
     text-align: left;
 }
 
@@ -111,22 +111,27 @@ div#footer-section {
     div#container-grid {
         display: grid;
         grid-template-rows: repeat(auto-fit, 1fr);
-        grid-template-columns: 1fr 2fr;
-        grid-template-areas: 
+        grid-template-columns: 250px 1fr;
+        grid-template-areas:
             'topnav     topnav'
             'sidebarnav maincontent'
-            'footer     footer'
+            'sidebarnav footer'
         ;
+    }
+
+    div#top-navbar-section {
+        position: fixed;
+        z-index: 200;
     }
 
     nav#top-nav {
         display: grid;
         grid-template-rows: repeat(auto-fit, 1fr);
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas: 
+        grid-template-areas:
             'logo . topnav'
         ;
-    
+
     }
 
     div.logo {
@@ -134,19 +139,71 @@ div#footer-section {
         justify-self: start;
         margin: 0 0 0 1em;
     }
-    
+
     div.hamburger-menu {
         display: none;
-    
+
     }
-    
+
     ul.top-nav-list {
         grid-area: topnav;
         display: flex;
         flex-direction: row;
     }
 
-    ul.top-nav-list li, ul.top-nav-list a {
-        margin: 0 1em 0 1em;
+    ul.top-nav-list li,
+    ul.top-nav-list a {
+        /* margin: 0 1em 0 1em; */
+
     }
+
+    a.nav-link {
+        display: inline-block;
+        font-size: 1em;
+        max-width: 200px;
+    }
+
+    /*Sidebar Styling*/
+    div#sidebar-div {
+        grid-area: sidebarnav;
+        display: flex;
+        flex-direction: column;
+        background-color: #9A8080;
+        padding-top: 5em;
+        min-height: 100vh;
+        z-index: 100;
+        top: 0;
+        left: 0;
+    }
+
+    header.sidebar-title {
+        align-self: center;
+        font-weight: bold;
+        font-size: 22px;
+        max-width: 100%;
+    }
+
+
+    div#main-div {
+        grid-area: maincontent;
+        background-color: #DBBCBC;
+        padding: 4em 1em;
+        z-index: 100;
+        max-height: 100vh;
+        overflow-y: scroll;
+    }
+
+    header h2.main-section-title {
+        text-align: left;
+    }
+
+    header>p {
+        text-align: left;
+    }
+
+    div#footer-section {
+        grid-area: footer;
+        background-color: #5A1919;
+    }
+
 }

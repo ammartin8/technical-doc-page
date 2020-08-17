@@ -173,6 +173,15 @@ div#footer-section {
         margin: .2em 0;
     }
 
+    .anchor:before {
+        content: '';
+        display: block;
+        position: relative;
+        width: 0;
+        height: 5em;
+        margin-top: -5em
+    }
+
     /*Sidebar Styling*/
     div#sidebar-div {
         grid-area: sidebarnav;

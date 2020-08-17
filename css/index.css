@@ -52,6 +52,18 @@ ul.top-nav-list {
     justify-self: center;
 }
 
+a.nav-link {
+    display: inline-block;
+    font-size: 1em;
+    font-weight: bold;
+    max-width: 200px;
+    color: #111;
+}
+
+a.nav-link:hover {
+    color: rgb(82, 16, 16)
+}
+
 /*Used to hide links in small screens*/
 .deactive {
     display: none;
@@ -153,14 +165,12 @@ div#footer-section {
 
     ul.top-nav-list li,
     ul.top-nav-list a {
-        /* margin: 0 1em 0 1em; */
-
+        margin: 0 1em 0 1em;
     }
 
-    a.nav-link {
-        display: inline-block;
-        font-size: 1em;
-        max-width: 200px;
+    ul.sidebar-list li,
+    ul.sidebar-list a {
+        margin: .2em 0;
     }
 
     /*Sidebar Styling*/
@@ -177,10 +187,10 @@ div#footer-section {
     }
 
     header.sidebar-title {
-        align-self: center;
+        align-self: left;
         font-weight: bold;
         font-size: 22px;
-        max-width: 100%;
+        width: 100%;
     }
 
 

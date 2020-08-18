@@ -3,9 +3,7 @@
     scroll-behavior: smooth;
 }
 
-body {
-    overflow-y: hidden;
-}
+
 
 div#container-grid {
     display: grid;
@@ -57,7 +55,7 @@ a.nav-link {
     font-size: 1em;
     font-weight: bold;
     max-width: 200px;
-    color: #111;
+    color: #000;
 }
 
 a.nav-link:hover {
@@ -89,6 +87,16 @@ div#sidebar-div {
     flex-direction: column;
     background-color: #9A8080;
     padding: 1em;
+    max-height: 10em;
+    overflow-y: scroll;
+}
+
+ul.sidebar-list {
+    text-align: center;
+}
+
+ul.sidebar-list a {
+    margin: .2em 0;
 }
 
 header.sidebar-title {
@@ -96,12 +104,16 @@ header.sidebar-title {
     font-weight: bold;
     font-size: 22px;
     max-width: 100%;
+    padding-bottom: .5em;
 }
 
-
+/*Main Content Styling*/
 div#main-div {
     grid-area: maincontent;
     background-color: #DBBCBC;
+}
+
+main#main-doc {
     padding: 1em;
 }
 
@@ -113,13 +125,68 @@ header>p {
     text-align: left;
 }
 
+pre {
+    tab-size: 2;
+    word-break: normal;
+    hyphens: none;
+    background-color: rgb(46, 43, 43);
+    color: rgb(228, 226, 226);
+    border-radius: 10px 10px;
+    max-width: 500px;
+    
+}
+
+code {
+    padding: 15px 20px 12px 22px;
+    white-space: pre;
+    display: block;
+    overflow-x: scroll;
+    scrollbar-color: #666 #201c29;
+    max-width: 100%;
+    min-width: 100px;
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+/*Footer Styling*/
 div#footer-section {
-    grid-area: footer;
+    display: grid;
+    grid-template-areas:
+        'left mid right'
+    ;
+    padding: 1em;
     background-color: #5A1919;
 }
 
+div.foot-sub1 {
+    grid-area: mid;
+    justify-self: center;
+    align-self: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.foot-sub2 {
+    grid-area: right;
+    justify-self: end;
+}
+
+div.foot-sub2 img {
+    width: 35px
+}
+
+.brand-logo {
+    width: 35px;
+    margin: 1em;
+}
 
 @media (min-width: 43em) {
+    body {
+        overflow-y: hidden;
+    }
+
     div#container-grid {
         display: grid;
         grid-template-rows: repeat(auto-fit, 1fr);
@@ -189,10 +256,10 @@ div#footer-section {
         flex-direction: column;
         background-color: #9A8080;
         padding-top: 5em;
-        min-height: 100vh;
+        min-height: 100%;
         z-index: 100;
-        top: 0;
-        left: 0;
+
+        overflow-y: hidden;
     }
 
     header.sidebar-title {
@@ -202,14 +269,24 @@ div#footer-section {
         width: 100%;
     }
 
+    ul.sidebar-list {
+        text-align: left;
+    }
+
 
     div#main-div {
         grid-area: maincontent;
         background-color: #DBBCBC;
-        padding: 4em 1em;
         z-index: 100;
+        min-height: calc(100vh - 100px);
         max-height: 100vh;
+        /*required*/
         overflow-y: scroll;
+        /*required*/
+    }
+
+    main#main-doc {
+        padding: 4em 1em;
     }
 
     header h2.main-section-title {
@@ -221,8 +298,34 @@ div#footer-section {
     }
 
     div#footer-section {
-        grid-area: footer;
-        background-color: #5A1919;
+        display: grid;
+        grid-template-areas:
+            'left mid right'
+        ;
+        padding: 1em;
     }
 
+    div.foot-sub1 {
+        grid-area: mid;
+        justify-self: center;
+        align-self: center;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    div.foot-sub2 {
+        grid-area: right;
+        justify-self: end;
+    }
+
+    div.foot-sub2 img {
+        width: 35px
+    }
+
+    .brand-logo {
+        width: 35px;
+        margin: 1em;
+    }
 }

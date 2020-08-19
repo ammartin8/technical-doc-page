@@ -34,8 +34,8 @@ The following technologies are used to build this application:
 
 1. Create the page layout using CSS grid and CSS flexbox ✔️
 2. Add content ✔️
-3. Add media queries for responsiveness
-4. Deploy to GitHub Pages
+3. Add media queries for responsiveness ✔️
+4. Deploy to GitHub Pages ✔️
 
 ## Requirements to Run Application
 

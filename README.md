@@ -39,4 +39,4 @@ The following technologies are used to build this application:
 
 ## Requirements to Run Application
 
-* For easy access, go to [www.amahmartin.me/project-plan-documentation-page](https://amahmartin.me/project-plan-documentation-page)
+* For easy access, go to [www.amahmartin.me/technical-doc-page](https://amahmartin.me/technical-doc-page)

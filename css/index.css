@@ -110,6 +110,11 @@ ul.sidebar-list a {
     margin: .2em 0;
 }
 
+#navbar {
+    display: flex;
+    flex-direction: column;
+}
+
 header.sidebar-title {
     align-self: center;
     font-weight: bold;

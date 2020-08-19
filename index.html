@@ -19,13 +19,13 @@
             <div class="top-nav-header" role="banner">
                 <div id="top-nav">
                     <div class="nav-title">
-                        <h3>Git Made Simple for Development</h3>
+                        <h3 class="top-nav-title">Git Made Simple for Development</h3>
                     </div>
                     <ul class="top-nav-list">
                         <li><a href="https://www.freecodecamp.org/" target="_blank" rel="noopener noreferrer">Learn to
                                 Code @ FCC!</a></li>
                         <li><a href="https://www.twitter.com/amuzen22" target="_blank" rel="noopener noreferrer">Connect
-                                on Twitter</a></li>
+                                With Me @ Twitter</a></li>
                     </ul>
                 </div>
             </div>
@@ -39,13 +39,17 @@
                     <li><a href="#What_is_Git?" class="nav-link">What is Git?</a></li>
                     <li><a href="#Why_is_Git_Useful?" class="nav-link">Why is Git Useful?</a></li>
                     <li><a href="#Getting_Started" class="nav-link">Getting Started</a></li>
-                    <li><a href="#Setting_Up_Global_Git_Configurations" class="nav-link">Setting Up Global Git Configurations</a></li>
-                    <li><a href="#Navigating_Through_Files_Using_Git_Bash_or_Bash_Terminal" class="nav-link">Navigating Through Files Using Git Bash or Bash
+                    <li><a href="#Setting_Up_Global_Git_Configurations" class="nav-link">Setting Up Global Git
+                            Configurations</a></li>
+                    <li><a href="#Navigating_Through_Files_Using_Git_Bash_or_Bash_Terminal" class="nav-link">Navigating
+                            Through Files Using Git Bash or Bash
                             Terminal</a></li>
                     <li><a href="#Setting_Up_a_Repository" class="nav-link">Setting Up a Repository</a></li>
-                    <li><a href="#Adding_Files_and_Saving_Changes_to_Your_Repository" class="nav-link">Adding Files and Saving Changes to Your Repository</a>
+                    <li><a href="#Adding_Files_and_Saving_Changes_to_Your_Repository" class="nav-link">Adding Files and
+                            Saving Changes to Your Repository</a>
                     </li>
-                    <li><a href="#Sending_Changes_to_a_Remote_Repository" class="nav-link">Sending Changes to a Remote Repository</a>
+                    <li><a href="#Sending_Changes_to_a_Remote_Repository" class="nav-link">Sending Changes to a Remote
+                            Repository</a>
                     </li>
                     <li><a href="#Summary" class="nav-link">Summary</a></li>
                     <li><a href="#References" class="nav-link">References</a></li>
@@ -109,7 +113,7 @@
                         rel="noopener noreferrer">https://git-scm.com/downloads</a>
                     <p>Once you have Git install, open up the Bash (for windows open up Git Bash) terminal, and
                         let’s make sure you have Git downloaded and running correctly. In the terminal type:</p>
-                    <pre><code tabindex="0">git --version</code></pre>
+                    <pre><code>git --version</code></pre>
                     <p>If you installed it correctly you should see the version of Git that is currently installed.
                     </p>
 
@@ -123,9 +127,9 @@
                     <p>Next, we’ll configure Git to identify you by adding your username and email. In the Bash
                         terminal we will do the following:</p>
                     <p>To Update Username:</p>
-                    <pre><code tabindex="0">git config --global user.name “Your Name”</code></pre>
+                    <pre><code>git config --global user.name “Your Name”</code></pre>
                     <p>To Update Email:</p>
-                    <pre><code tabindex="0">git config --global user.email “Your Email”</code></pre>
+                    <pre><code>git config --global user.email “Your Email”</code></pre>
                     <p>These configurations will be simply used to identify who made what changes in your source
                         code.</p>
 
@@ -146,14 +150,14 @@
                             or file you are in.
                             For
                             example, type the following in the terminal:</p>
-                        <pre><code tabindex="0">pwd</code></pre>
+                        <pre><code>pwd</code></pre>
                         <p>The terminal should return the current location you are in as a full filepath or relative
                             filepath: </p>
                         <p>A fullpath file:</p>
-                        <pre><code tabindex="0">/C/Users/your_username </code></pre>
+                        <pre><code>/C/Users/your_username </code></pre>
                         <p><strong>OR</strong></p>
                         <p>A relative path file:</p>
-                        <pre><code tabindex="0">~/your_username</code></pre>
+                        <pre><code>~/your_username</code></pre>
                         <p>This command is useful in helping you identify where you are currently in your terminal.
                         </p>
                     </div>
@@ -171,15 +175,15 @@
                             alt="Image clip of a folder listing project files and folders in Visual Studio Code Software">
                         <p>Your current working directory would look something like this after typing pwd in the Git
                             Bash Terminal:</p>
-                        <pre><code tabindex="0">/C/Users/your_username/Desktop/technical-doc-page</code></pre>
+                        <pre><code>/C/Users/your_username/Desktop/technical-doc-page</code></pre>
                         <p>To go into the css folder using the terminal, you would type the following:</p>
-                        <pre><code tabindex="0">cd css</code></pre>
+                        <pre><code>cd css</code></pre>
                         <p>Then type:</p>
-                        <pre><code tabindex="0">pwd</code></pre>
+                        <pre><code>pwd</code></pre>
                         <p>The terminal working directory will change from:</p>
-                        <pre><code tabindex="0">/C/Users/your_username/Desktop/technical-doc-page</code></pre>
+                        <pre><code>/C/Users/your_username/Desktop/technical-doc-page</code></pre>
                         <p>To:</p>
-                        <pre><code tabindex="0">/C/Users/your_username/Desktop/technical-doc-page/css</code></pre>
+                        <pre><code>/C/Users/your_username/Desktop/technical-doc-page/css</code></pre>
                         <p>Now your current working directory is in the css of your directory and you can add or
                             delete
                             files using other <a
@@ -197,7 +201,7 @@
                             of selected folder.</p>
                         <p><strong>Quick Tip 2!</strong> To go back out of your current folder using the Git Bash
                             terminal, enter the following command:</p>
-                        <pre><code tabindex="0">cd ../</code></pre>
+                        <pre><code>cd ../</code></pre>
                         <p>This command allows you to return back to the previous folder.</p>
                     </div>
 
@@ -224,11 +228,11 @@
                         navigate to the folder).</p>
                     <p>To create a new Git
                         repository for your project, type the following:</p>
-                    <pre><code tabindex="0">git init</code></pre>
+                    <pre><code>git init</code></pre>
                     <p>This will create a .git file in your root or main folder of the project. To see this file in
                         the
                         terminal type the following Bash command:</p>
-                    <pre><code tabindex="0">ls -a</code></pre>
+                    <pre><code>ls -a</code></pre>
                     <p>The ls command allows you to see the files listed in the working directory. The ls -a command
                         allows you to see all files including hidden files. Since the .git file is considered a
                         hidden
@@ -250,39 +254,39 @@
                     <p>After you have created your new Git Repository, if you already have files in your project
                         folder type the following in the terminal to see what files and changes to the source code
                         have not been added to your Git Repository:</p>
-                    <pre><code tabindex="0">git status</code></pre>
+                    <pre><code>git status</code></pre>
                     <p>The git status command is a great way to see what files have not been added to the
                         repository. It is also useful in giving you suggestions on what steps to take next when you
                         forget how to add files to your repository.</p>
                     <p>If you have one file or just want to add specific files to the
                         repository you can type:</p>
-                    <pre><code tabindex="0">git add filename</code></pre>
+                    <pre><code>git add filename</code></pre>
                     <p>For example, to add just one file:</p>
-                    <pre><code tabindex="0">git add README.md</code></pre>
+                    <pre><code>git add README.md</code></pre>
                     <p>To add multiple files:</p>
-                    <pre><code tabindex="0">git add README.md index.html</code></pre>
+                    <pre><code>git add README.md index.html</code></pre>
                     <p>If you have multiple files to add to your repository and you don't want list each file, you
                         can add all files at once using the following command:</p>
-                    <pre><code tabindex="0">git add .</code></pre>
+                    <pre><code>git add .</code></pre>
                     <p>Now your files been added to a staging area. The staging area is the step prior to committing
                         your files to your Git repository. This process is similar to adding files to a holding area
                         before committing the changes to be made to your Git repository. Adding files to the staging
                         area provides you opportunity to review your files before officially committing them to the
                         repository.</p>
-                    <p>Now when you type:
-                    <pre><code tabindex="0">git status</code></pre> you should see the files you added, listed under
-                    changes to be committed.</p>
+                    <p>Now when you type:</p>
+                    <pre><code>git status</code></pre>
+                    <p>you should see the files you added, listed under changes to be committed.</p>
                     <p>To commit your changes type:</p>
-                    <pre><code tabindex="0">git commit -m "Type a brief message of the changes you did"</code></pre>
+                    <pre><code>git commit -m "Type a brief message of the changes you did"</code></pre>
                     <p>For example:</p>
-                    <pre><code tabindex="0">git commit –m “Added README.md file”</code></pre>
+                    <pre><code>git commit –m “Added README.md file”</code></pre>
                     <p>This will add a new commit and document what changes were made.</p>
                     <p>Alright! You made your first commit! To view the history of your commits that you have made
                         type:</p>
-                    <pre><code tabindex="0">git log</code></pre>
-                    <p><strong>Quick Tip!</strong> When finished viewing git log, press
-                    <pre><code tabindex="0">q</code></pre> to quit out of the
-                    log</p>
+                    <pre><code>git log</code></pre>
+                    <p><strong>Quick Tip!</strong> When finished viewing git log, press</p>
+                    <pre><code>q</code></pre> 
+                    <p>to quit out of the log</p>
                     <p>The git log command will show you a list of all commits you have made in your Git repository.
                     </p>
                     <p>Lastly, we will go over how to send your changes to a remote repository so that you may
@@ -349,18 +353,18 @@
                         <h4 class="subtitle">(git remote, git commit commands)</h4>
                         <p>Now that your remote repository in GitHub is set up, copy the url listed for your new
                             repository. It should look something similar to this:</p>
-                        <pre><code tabindex="0">https://github.com/my-username/my-new-repository-name.git</code></pre>
+                        <pre><code>https://github.com/my-username/my-new-repository-name.git</code></pre>
                         <p> Now go back to your terminal, and we will associate our local repository to our remote
                             repository by typing the following:</p>
-                        <pre><code tabindex="0">git remote add origin https://github.com/my-username/my-new-repository-name.git</code></pre>
+                        <pre><code>git remote add origin https://github.com/my-username/my-new-repository-name.git</code></pre>
                         <p>Next, we will push our changes to the master branch in our remote repository on GitHub by
                             typing the following:</p>
-                        <pre><code tabindex="0">git push –u origin master</code></pre>
+                        <pre><code>git push –u origin master</code></pre>
                         <p><strong>Note:</strong> -u is only required the very first time you are pushing changes to
                             a new remote
                             repository. Any future git push commands you want to do in the same repository, you can
                             exclude the -u as such:</p>
-                        <pre><code tabindex="0">git push origin master</code></pre>
+                        <pre><code>git push origin master</code></pre>
                         <p>In the previous command, origin is the default name given to the remote repository and a
                             way to identify the remote repostiory you are connecting to.
                             The name master
@@ -459,12 +463,9 @@
                 </div>
             </div>
         </div>
-
-
-
     </div>
+    <script src="js/script.js"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
-<script src="js/script.js"></script>
-<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 
 </html>

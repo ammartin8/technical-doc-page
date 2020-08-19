@@ -26,7 +26,7 @@ div#top-navbar-section {
     background-color: #193d4b;
 }
 
-nav#top-nav {
+div#top-nav {
     display: grid;
     grid-template-rows: repeat(auto-fit, 1fr);
     grid-template-columns: repeat(auto-fit, 1fr);
@@ -244,7 +244,7 @@ div.foot-sub2 img {
         z-index: 200;
     }
 
-    nav#top-nav {
+    div#top-nav {
         display: grid;
         grid-template-rows: repeat(auto-fit, 1fr);
         grid-template-columns: 1fr 1fr 1fr;
